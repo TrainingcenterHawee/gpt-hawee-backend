@@ -1,0 +1,12 @@
+{
+  "name": "gpt-hawee-backend",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "api/run-prompt.js",
+  "scripts": {
+    "start": "node api/run-prompt.js"
+  },
+  "dependencies": {
+    "openai": "^4.21.0"
+  }
+}
