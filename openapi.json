@@ -1,0 +1,48 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Prompt Runner",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/api/run-prompt": {
+      "post": {
+        "operationId": "runPrompt",
+        "summary": "Gọi prompt_id đã publish",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "user_input": {
+                    "type": "string"
+                  }
+                },
+                "required": ["user_input"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Phản hồi từ GPT",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "reply": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
